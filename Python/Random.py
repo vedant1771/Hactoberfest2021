@@ -30,4 +30,4 @@ elif (case==2):
               print(random_num,end=' ')
               count+=1
 else:
-      print(" Enter choice 1 or 2 ")
+      print(" Enter choice=> 1 or 2 ")
