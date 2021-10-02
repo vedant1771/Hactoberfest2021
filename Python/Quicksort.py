@@ -36,3 +36,6 @@ printArr(a)
 quick(a, 0, len(a)-1)  
 print("\nAfter sorting array elements are - ")  
 printArr(a)  
+
+
+#nice way
