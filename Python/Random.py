@@ -3,7 +3,7 @@ from random import randint
 num=[]
 num1=[]
 count=0
-case=int(input("1. Give Data and Select Random Number from them \n 2. Generate Random numbers in range : \n"))
+case=int(input(" 1. Give Data and Select Random Number from them \n 2. Generate Random numbers in range : \n"))
 if case==1:
  n=int(input(" Enter total number of Data "))
  print("\n Enter Data: ")
@@ -30,4 +30,4 @@ elif (case==2):
               print(random_num,end=' ')
               count+=1
 else:
-      print(" Enter choice 1 or 2 ")
+      print("Enter choice 1 or 2")
