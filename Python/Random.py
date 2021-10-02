@@ -1,5 +1,7 @@
 import random
 from random import randint
+
+//to generate random no.
 num=[]
 num1=[]
 count=0
