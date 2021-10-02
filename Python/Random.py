@@ -1,5 +1,7 @@
 import random
 from random import randint
+
+//to generate random no.
 num=[]
 num1=[]
 count=0
@@ -30,4 +32,4 @@ elif (case==2):
               print(random_num,end=' ')
               count+=1
 else:
-      print("Enter choice 1 or 2")
+      print(" Enter choice=> 1 or 2 ")
