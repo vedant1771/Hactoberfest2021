@@ -2,9 +2,6 @@
 
 ## Repository for Hactoberfest2021.
 
-
-**You can Commit changes to this repository and changes will be merged.**
-
 #### Important links
 ##### Visit the Hacktoberfest website here[Hacktoberfest 2021](https://hacktoberfest.digitalocean.com/)
 ##### Checkout the cooool Swags for this year [Hacktoberfest Swag list](https://hacktoberfestswaglist.com/)
@@ -21,3 +18,4 @@ for eg. If you want to make directory for C
 Give File Name as C/Filename.C
 
 Happy Contributing
+
