@@ -7,6 +7,7 @@
 ##### Checkout the cooool Swags for this year [Hacktoberfest Swag list](https://hacktoberfestswaglist.com/)
 
 #### Remember Win Hearts 💕 not just swags
+#### Choose Trees over Tees to reduce carbon emission 
 #### Contribute to opensourse 
 ###  Happy Hacktoberfesrt 2021 :)
 
