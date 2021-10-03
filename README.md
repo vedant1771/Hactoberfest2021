@@ -1,6 +1,8 @@
 # Hactoberfest2021
 
 ## Repository for Hactoberfest2021.
+![image](https://user-images.githubusercontent.com/90646049/135742786-3a6fc9dc-51ce-4feb-819c-7d37dc753755.png)
+
 
 #### Important links
 ##### Visit the Hacktoberfest website here[Hacktoberfest 2021](https://hacktoberfest.digitalocean.com/)
