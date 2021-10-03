@@ -1,10 +1,13 @@
+#Program to create GUI Calculator Version
 from tkinter import *
 
 
 
 
 root = Tk()
-root.title("calculator")
+root.geometry('620x650')
+root.resizable(False, False)
+root.title("Calculator")
 root.iconbitmap("C:/Users/lalita/Downloads//icon.ico")
 
 
