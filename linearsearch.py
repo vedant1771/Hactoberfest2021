@@ -13,8 +13,9 @@
 def search(arr, x):
   
     for i in range(len(arr)):
-  
+        #returning the index of the element if found
         if arr[i] == x:
             return i
+        
   
     return -1
