@@ -8,3 +8,6 @@ def check(l):
       f.append(i)
   return f
 print(check(l))
+
+
+#looks good
