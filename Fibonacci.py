@@ -1,3 +1,4 @@
+#code for generating fibonacci series
 first,second=0,1
 n = int(input("please give a number for fibonacci series : "))
 def fibonacci(num):
