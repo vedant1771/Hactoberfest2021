@@ -8,3 +8,6 @@ for line in fhand:
     c[email] = c.get(email, 0) + 1
 
 print(c)
+
+
+#wts this?
