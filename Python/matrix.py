@@ -20,3 +20,6 @@ print("The original list : " + str(test_list))
 res = prod([ele for sub in test_list for ele in sub])
 
 print("The total element product in lists is : " + str(res))
+
+
+#ok
