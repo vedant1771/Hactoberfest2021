@@ -94,3 +94,6 @@ offset << " Calculated offset = " << ALIGNOFFSET((int)(&sz.d)-
 offset << " Calculated offset = " << ALIGNOFFSET((int)(&sz.e)-
 (int)(&sz),sizeof(sz.e),sizeof(sz.f)) << endl;
 }
+
+
+
