@@ -34,8 +34,12 @@ int maxSubArraySum(int a[], int size)
 /*Driver program to test maxSubArraySum*/
 int main()
 {
-    int a[] = {-2, -3, 4, -1, -2, 1, 5, -3};
-    int n = sizeof(a)/sizeof(a[0]);
-    int max_sum = maxSubArraySum(a, n);
-    return 0;
+ int n;
+ cin>>n;
+ int a[n];
+ for(int i=0;i<n;i++){
+  cin>>a[i];
+ }
+ int max_sum = maxSubArraySum(a, n);
+ return 0;
 }
