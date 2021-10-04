@@ -5,8 +5,8 @@
   pip install termcolor
   pip install pyfiglet
   ```
-2. Now run this file in the terminal using python **`v3`**. 
-  The command **`python`** name depends on your python installation. Here are 3 example that you can try and see after switcing to the same folder where is **`converter.py`** is located
+2. Now run the **`converter.py`** file in the terminal using python **`v3`**. 
+  The command **`python`** name depends on your python installation. Here are 3 example that you can try and use this after switcing to the same folder where is **`converter.py`** is located
   ```
   py converter.py
   
