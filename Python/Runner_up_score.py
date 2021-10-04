@@ -10,3 +10,6 @@ if __name__ == '__main__':
     # print(arr)
     elem = max(list)
     print(elem)
+    
+    
+    
