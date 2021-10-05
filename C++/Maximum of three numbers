@@ -1,0 +1,21 @@
+#include<stdio.h>
+using namespace std;
+
+int main ()
+{
+  int a,b,c;
+  cin>>a>>b>>c;       //Taking input of three numbers
+  
+  if(a>b && a>c)
+  {
+      cout<<"Maximum of three numbers is "<<a;
+  }
+  else if(b>c)
+  {
+      cout<<"Maximum of three numbers is "<<b;
+  }
+  else 
+  {
+      cout<<"Maximum of three numbers is "<<c;
+  }
+}

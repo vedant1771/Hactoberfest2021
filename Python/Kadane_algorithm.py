@@ -12,6 +12,5 @@ def sum_array(array, array_size):
             temp_max = end_max  
               
     return temp_max  
-# input array    
 array = [3, -5, 4, -1, -2, 6, -8]  
 print("Maximum value in the array:", sum_array(array, len(array))) 

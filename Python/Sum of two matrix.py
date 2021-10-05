@@ -1,3 +1,4 @@
+#code for finding the sum of two matrix
 def inp(rows,column):
     matrix_a= [[int(input()) for i in range(column)] for i in range(rows)]
     return (matrix_a)
