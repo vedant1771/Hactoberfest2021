@@ -1,0 +1,67 @@
+import numpy as np
+
+input = np.array([
+                  [-1,-1],
+                  [-1,1],
+                  [1,-1],
+                  [1,1]
+])
+target=np.array([-1,1,1,1])
+w=[0,0]
+LR=1
+b=0
+epoch= 20
+T=0
+
+for j in range (0, epoch):
+  print("epoch:",j)
+  global_error = 0
+  for i in range(0,input.shape[0]):
+
+    actual = target[i]
+    instance = input[i]
+
+    x0 = instance[0]
+    x1 = instance[1]
+
+    sum_unit = b + (x0*w[0] + x1*w[1])
+
+    if sum_unit > 0:
+      activation=1
+    elif sum_unit < 0:
+      activation=-1
+    else:
+      activation =0
+
+    if actual != activation:
+      w[0]=w[0] + LR*actual*x0
+      w[1]=w[1] + LR*actual*x1
+      b=b + LR*actual
+
+    error = actual - activation
+    print("prediction:", activation,"actual:",target[i],"error:",error,")")
+
+    global_error = global_error +abs(error)
+    '''
+    error= actual-activation
+    global_error = global_error+abs(error)
+    print("prediction:",activation,"whereas actual was:", target[i],"(error:",error.")")
+    w[0]=w[0]+LR*error
+    W[1]=w[1]+LR*error
+    #print(w[0])
+    #print(w[1])
+    #b=b+actual*LR
+  print("---------------")
+
+  if global error==0:
+    break
+
+    '''
+
+  print("-----------------")
+  
+  if global_error ==0:
+    print("final weight:",w[0],w[1],b)
+
+    break
+
