@@ -1,0 +1,34 @@
+body{
+    background: url(https://storage.pixteller.com/designs/designs-images/2017-07-30/11/backgrounds-passion-simple-background-image-1-597d9e419bea3.png);
+    background-size: cover;
+    align-items: center;
+   
+}
+.clock{
+    width: 30rem;
+    height: 30rem;
+    border: 20px solid rgba(138, 100, 5, 0.911);
+                           
+    border-radius: 50%;
+    position: relative;
+    margin: 50px auto;
+    padding: 2rem;
+}
+.face{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+    
+}
+.hand{
+      width: 50%;
+      height: 6px;
+      background:  rgb(0, 43, 0);
+      position: absolute;
+      top: 50%;
+      transform-origin: 100%;
+      transform: rotate(90deg);
+      transition: all 0.05s;
+      transition-timing-function: cubic-bezier(.1, 2.7, 0.58, 1);
+}
