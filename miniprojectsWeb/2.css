@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+html
+{
+    background: #162c3b;
+    scroll-behavior: smooth;
+}
+.head
+{
+    padding: 50px;
+    text-align: center;
+    color:#fff;
+}
+.head h1
+{
+  font-size: 400%;
+}
+.price
+{
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 20px;
+    background: #162c3b;
+}
+.price .shapecon
+{
+    position: relative;
+    width: 350px;
+    margin: 0 auto;
+    background: rgb(79, 76, 82);
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+.price .shapecon .layer
+{
+    position: absolute;
+    top: calc(100% - 2px);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background: linear-gradient(#0d2acc, #d41595);
+    z-index: 1;
+    transition: 0.5s;
+}
+.price .shapecon:hover .layer
+{
+    top:0;
+}
+.price .shapecon .shape
+{
+    z-index: 2;
+    position: relative;
+}
+.price .shapecon .shape p
+{
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+}
+.price .shapecon .shape .image
+{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.price .shapecon .shape .details h2
+{
+    font-size: 18px;
+    color: #fff;
+}
+.price .shapecon .shape .details h2 span
+{
+    font-size: 14px;
+    color: #fff;
+    transition: 0.5s;
+}
