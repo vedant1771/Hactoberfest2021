@@ -3,6 +3,6 @@
      https://torstencurdt.com/tech/posts/modulo-of-negative-numbers/
  */
 function mod(a, b) {
-    c = a % b
+  let c = a % b
     return (c < 0) ? c + b : c
 }
