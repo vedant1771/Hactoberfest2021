@@ -1,6 +1,18 @@
 #include <iostream>
 using namespace std;
 
+int kthlargestElement(vector<int>&arr,int k)
+{
+    // create a max-heap using priority_queue
+    priority_queue<int, vector<int>> pq(less<int>(), arr); 
+    // pop from max-heap exactly (k-1) times
+    while (--k) {
+        pq.pop();
+    } 
+    //root of max-heap
+    return pq.top();
+}
+
 int main()
 {
 	int n,i,j,k;
@@ -36,6 +48,7 @@ int main()
 	}
 
 	cout<<"Kth largest number:"<<arr[n-k];
+	cout<<"\nKth largest number : "<<kthlargestElement(arr,k);
 	return 0;
 
 }
