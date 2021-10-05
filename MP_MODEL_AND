@@ -1,0 +1,28 @@
+import numpy as np
+
+
+input_table=np.array([[0,0],[0,1],[1,0],[1,1]])
+
+print (f"input table: \n {input_table}")
+
+
+weights=np.array([1,1])
+
+print (f'weights: \n {weights}')
+
+dot_product = input_table@weights
+
+print(f'dot product: \n {dot_product}')
+
+def linear_threshold_gate(dot:int, T:int):
+  if dot>= T:
+    return 1
+  else:
+    return 0
+
+T=1
+
+
+for i in range (0,4):
+  activation= linear_threshold_gate(dot_product[i],T)
+  print (f' Activation {activation}')
