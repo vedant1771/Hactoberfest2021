@@ -1,4 +1,4 @@
-// A CPP program to demonstrate application of quick sort algorithm (randomized)
+// A CPP program to demonstrate application of quick select algorithm (randomized)
 // to find kth smallest element in a given array
 
 #include<bits/stdc++.h>
