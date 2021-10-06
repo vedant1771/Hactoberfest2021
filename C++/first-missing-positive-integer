@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+
+int firstMissingPositive(vector<int>& A) {
+        
+    int n = A.size();
+    
+    for(int i = 0; i < n; i++){
+        if(A[i] <= 0) A[i] = n+5;
+    }
+    
+    for(int i = 0; i < n; i++){
+        int index = abs(A[i])-1;
+        if(index >= n) continue;
+        if(A[index] < 0) continue;
+        A[index] = -1 * A[index];
+    }
+    
+    for(int i = 0; i < n; i++){
+        if(A[i] > 0) return i+1;
+    }
+    
+    return n+1;
+}
+
+int main() {
+    vector<int> A{1,2,3,5};
+    cout<<firstMissingPositive(A);
+}
