@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giphy</title>
+
+    <!-- the css stylesheet -->
+    <style>
+      body {
+        width: 80%;
+        max-width: 1024px;
+        margin: 0 auto;
+        background-color: rgba(42, 42, 43, 0.925);
+      }
+
+      .container-padding50 {
+        padding-top: 40px;
+      }
+
+      .js-userinput {
+        width: 80%;
+        display: inline-block;
+        padding: 20px;
+        font-size: 16px;
+        font-family: Helvetica, sans-serif;
+        background-color: black;
+        color: aliceblue;
+      }
+
+      .js-go {
+        width: 10%;
+        display: inline-block;
+        padding: 20px;
+        font-size: 16px;
+        font-family: Helvetica, sans-serif;
+        background-color: black;
+        background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAEOYAC7tc-hlCIvODyfP-XEY3wG-aNUsOYQ&usqp=CAU");
+        background-position: center;
+        background-size: 70px;
+        border-radius: 30px;
+      }
+    </style>
+    <!-- the names after the container word in 
+      class field of div, input, button is just a 
+      group name to define css, 
+      every place with this class name will have the same style-->
+  </head>
+
+  <body>
+    <!-- makeing the input field and the search button -->
+    <!-- class name is js-userinput -->
+    <div class="container container-padding50">
+      <!-- taking text type user input, and a default value -->
+      <input type="text" class="js-userinput" value="" />
+      <!-- a button with container-button type style defined in css file -->
+      <button class="js-go">.</button>
+    </div>
+
+    <!-- the container for the output -->
+    <div class="container container-padding50 js-container"></div>
+
+    <!-- the js script -->
+    <script>
+      // grabbing the boxes from html file and reading the input
+      let input = document.querySelector(".js-userinput").value;
+      let outContainer = document.querySelector(".js-container");
+
+      // presenting the trending gifs on first entry
+      dataParse(
+        "https://api.giphy.com/v1/gifs/trending?api_key=dhGatsWyo2dHB0vT8oyybsYlNGYfCQoD"
+      );
+
+      //readding the data from input field
+      function inputRead() {
+        input = document.querySelector(".js-userinput").value;
+        if (input == "") {
+          return "https://api.giphy.com/v1/gifs/trending?api_key=dhGatsWyo2dHB0vT8oyybsYlNGYfCQoD";
+        } else {
+          return (
+            "https://api.giphy.com/v1/gifs/search?q=" +
+            input +
+            "&api_key=dhGatsWyo2dHB0vT8oyybsYlNGYfCQoD"
+          );
+        }
+      }
+
+      // getting the data from remote url
+      function dataParse(url) {
+        // AJAX(element reload, not the whole page) Request
+        let GiphyAJAXCall = new XMLHttpRequest();
+        GiphyAJAXCall.open("GET", url);
+        GiphyAJAXCall.send();
+
+        // parsing the data ionce it is loaded
+        GiphyAJAXCall.addEventListener("load", function (gifdata) {
+          let parsedData = JSON.parse(gifdata.target.response);
+          output(parsedData.data);
+        });
+      }
+
+      // showing the result
+      function output(gifUrls) {
+        outContainer.innerHTML = "";
+        // iterating through 25 gifs
+        for (let i = 0; i < 25; i++) {
+          // or use gifUrls.forEach(function(){}));
+          // += operator same as in c or c++
+          outContainer.innerHTML +=
+            '<img src="' +
+            gifUrls[i].images.fixed_height_downsampled.url +
+            '">';
+        }
+
+        // the code here is to make a gif TV, just comment the uppar loop and run this insted
+        // for (let i = 0; i < 25; i++) {
+        //   setTimeout(function () {
+        //     outContainer.innerHTML =
+        //       '<img src="' + gifUrls[i].images.fixed_height_downsampled.url + '">';
+
+        //     console.log(outContainer.innerHTML);
+        //   }, 6000 * i);
+        // }
+      }
+
+      // "click" event listner over button icon, to read the data
+      document.querySelector(".js-go").addEventListener("click", function () {
+        // using the url, input and key, getting the data for gifs
+        dataParse(inputRead());
+      });
+
+      // "enter key press" event listener, to read input data
+      document
+        .querySelector(".js-userinput")
+        .addEventListener("keyup", function (keyEvent) {
+          if (keyEvent.key == "Enter") {
+            dataParse(inputRead());
+          }
+        });
+
+      // tv.giphy.com/v1/gifs/tv?api_key=CW27AW0nlp5u0&tag=giphytv
+    </script>
+  </body>
+</html>
