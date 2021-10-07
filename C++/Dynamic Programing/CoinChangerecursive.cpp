@@ -26,11 +26,13 @@ int cnt(vector<int> &arr, int target)
  
 int main()
 {
-    int n, i, j;
-    cin>>n;
+    int n,target;
+    cin>>n,target;
     vector<int> arr(n,0);  
-     
-    cout << " " << cnt(arr, 4);
+    for(int i=0;i<n;i++)
+    cin>>arr[i];
+ 
+    cout << " " << cnt(arr, target);
      
     return 0;
 }
