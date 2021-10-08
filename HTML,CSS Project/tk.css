@@ -1,5 +1,7 @@
-*
-{
+/* add poppins font  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,500&display=swap');
+
+*{
   padding:0;
   margin:0;
 }
@@ -106,17 +108,17 @@ font-style: italic;
 }
 .menu-bar
 {
-//opacity:55;
+/* opacity:55; */
 position:fixed;
 top:0;
 left:0;
 right:0;
 background-color:rgba(0,100,0,.7);
 text-align:right;
+z-index: 9999;
 }
 .menu-bar ul
 {
-
 display:inline-flex;
 list-style:none;
 
@@ -129,23 +131,23 @@ padding:10px;
 }
 .menu-bar ul li a
 {
-  font size:20px;
+  /* font-size:15px; */
   display: block;
   color: white;
   text-align: center;
-  padding: 6px 8px;
+  padding: 6px ;
   text-decoration: none;
 }
 .menu-bar .fa
 {
 
-margin-right: 2px;
+margin-right: 6px;
 }
 
 .Active, .menu-bar ul li:hover
 {
 background-color:#333;
-border-radius: 0px;
+border-radius: 10px;
 }
 
 .search
@@ -158,9 +160,10 @@ margin-left: 10px;
 input
 {
 padding: 8px;
-border: none;
-//height: 40px;
-//width: 300px;
+border: 1px solid #333;
+/* height: 40px; */
+/* width: 300px; */
+border-radius: 5px 0px 0px 5px;
 font-size: 17px;
 font-family: sans-serif;
 
@@ -173,7 +176,7 @@ font-family: sans-serif;
   border-radius: 0px 5px 5px 0px;
   cursor:pointer;
   position: relative;
-  padding: 7px;
+  padding: 8px;
   font-family: sans-serif;
   font-size: 16px;
 }
@@ -197,7 +200,7 @@ display:none;
 display: block;
 position: absolute;
 background-color:rgba(0,100,0,.9);
-margin-top: 15px;
+margin-top: 18px;
 margin-left: -15px;
 }
 
@@ -223,7 +226,7 @@ display:none;
 display: block;
 position: absolute;
 background-color:rgba(0,100,0,.9);
-margin-top: 15px;
+margin-top: 18px;
 margin-left: -15px;
 }
 
@@ -249,7 +252,7 @@ display:none;
 display: block;
 position: absolute;
 background-color:rgba(0,100,0,.9);
-margin-top: 15px;
+margin-top: 18px;
 margin-left: -15px;
 }
 
@@ -307,7 +310,7 @@ transition: 1s;
 }
 .box-2:hover
 {
-transform: scale(1.3);
+transform: scale(1.1);
 }
 .box-3
 {
@@ -323,7 +326,7 @@ transition: 1s;
 
 .box-3:hover
 {
-transform: scale(1.3);
+transform: scale(1.1);
 }
 
 .box-4
@@ -340,7 +343,7 @@ transition: 1s;
 
 .box-4:hover
 {
-transform: scale(1.3);
+transform: scale(1.1);
 }
 .box-5
 {
@@ -355,7 +358,7 @@ transition: 1s;
 }
 .box-5:hover
 {
-transform: scale(1.3);
+transform: scale(1.1);
 }
 .box-6
 {
@@ -370,7 +373,7 @@ transition: 1s;
 }
 .box-6:hover
 {
-transform: scale(1.3);
+transform: scale(1.1);
 }
 .sec-1 box-2 a:hover
 {
@@ -418,7 +421,7 @@ transition: 1s;
 
 .box-7:hover
 {
-transform: scale(1.3);
+transform: scale(1.1);
 }
 .box-8
 {
@@ -434,7 +437,7 @@ transition: 1s;
 
 .box-8:hover
 {
-transform: scale(1.3);
+transform: scale(1.1);
 }
 .box-9
 {
@@ -450,7 +453,7 @@ transition: 1s;
 
 .box-9:hover
 {
-transform: scale(1.3);
+transform: scale(1.1);
 }
 .box-10
 {
@@ -466,7 +469,7 @@ transition: 1s;
 
 .box-10:hover
 {
-transform: scale(1.3);
+transform: scale(1.1);
 }
 .box-11
 {
@@ -482,7 +485,7 @@ transition: 1s;
 
 .box-11:hover
 {
-transform: scale(1.3);
+transform: scale(1.1);
 }
 .sec-1 box-2 a:hover
 {
@@ -529,7 +532,7 @@ transition: 1s;
 
 .box-12:hover
 {
-transform: scale(1.3);
+transform: scale(1.1);
 }
 .box-13
 {
@@ -545,7 +548,7 @@ transition: 1s;
 
 .box-13:hover
 {
-transform: scale(1.3);
+transform: scale(1.1);
 }
 .box-14
 {
@@ -561,7 +564,7 @@ transition: 1s;
 
 .box-14:hover
 {
-transform: scale(1.3);
+transform: scale(1.1);
 }
 .box-15
 {
@@ -577,7 +580,7 @@ transition: 1s;
 
 .box-15:hover
 {
-transform: scale(1.3);
+transform: scale(1.1);
 }
 
 .box-16
@@ -593,7 +596,7 @@ transition: 1s;
 }
 .box-16:hover
 {
-transform: scale(1.3);
+transform: scale(1.1);
 }
 .sec-0
 {
@@ -622,7 +625,7 @@ width: 300px;
 background:#fff;
 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
 margin-left: 50px;
-//transform: translate(-50%,-50%);
+/* //transform: translate(-50%,-50%); */
 overflow: hidden;
 }
 .box-17 .imgbox-01
@@ -630,14 +633,15 @@ overflow: hidden;
 height: 200px;
 box-sizing: border-box;
 }
+
 .box-17 .imgbox-01 img
 {
-
   display: block;
-  width: 99%;
+  width: 100%;
   margin: 0px auto 0;
-  //background-size: cover;
+  /* //background-size: cover; */
 }
+
 .details-01
 {
 position: absolute;
@@ -647,7 +651,7 @@ background: #fff;
 padding: 30px;
 box-sizing: border-box;
 box-shadow: 0 0 0 rgba(255, 0, 0, 0);
-transition: 1s;
+transition: all ease 0.5s;
 }
 .box-17:hover .details-01
 
@@ -671,6 +675,7 @@ font-weight: bold;
 color: #ff4faf;
 font-size: 15px;
 }
+
 .a
 {
 display: block;
@@ -680,7 +685,7 @@ margin: 15px 0 0;
 background:#ff4faf;
 text-align: center;
 text-decoration: none;
-transi8ion: 1s;
+transition:all ease 1s;
 cursor: pointer;
 }
 .details-01 .fa
@@ -697,13 +702,13 @@ width: 300px;
 background:#fff;
 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
 margin-left: 400px;
-//transform: translate(-50%,-50%);
+/* //transform: translate(-50%,-50%); */
 overflow: hidden;
 }
 .box-18 .imgbox-02
 {
 height: 200px;
-box-si8ing: border-box;
+box-sizing: border-box;
 }
 .box-18 .imgbox-02 img
 {
@@ -722,7 +727,7 @@ background: #fff;
 padding: 30px;
 box-sizing: border-box;
 box-shadow: 0 0 0 rgba(255, 0, 0, 0);
-transition: 1s;
+transition: all ease 0.5s;
 }
 .box-18:hover .details-02
 
@@ -771,7 +776,7 @@ width: 300px;
 background:#fff;
 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
 margin-left: 740px;
-//transform: translate(-50%,-50%);
+/* //transform: translate(-50%,-50%); */
 overflow: hidden;
 }
 .box-19 .imgbox-03
@@ -845,7 +850,7 @@ width: 300px;
 background:#fff;
 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
 margin-left: 1100px;
-//transform: translate(-50%,-50%);
+/* //transform: translate(-50%,-50%); */
 overflow: hidden;
 }
 .box-20 .imgbox-04
@@ -933,7 +938,7 @@ float: left;
 height: 400px;
 margin: 10px;
 width: 300px;
-//background-color: #333;
+/* //background-color: #333; */
 border-radius: 20px 20px 20px 20px;
 
 }
@@ -944,9 +949,11 @@ text-align: center;
 }
 .b-1 h5
 {
+font-family: 'Poppins', sans-serif;
 margin: 20px;
 text-align: center;
 color:black;
+line-height: 1rem;
 }
 .button-a
 {
@@ -962,7 +969,7 @@ color:black;
 .button-a:hover
 {
 
-  transform:scale(1.3);
+  transform:scale(1.1);
 }
 
 .b-2
@@ -971,7 +978,7 @@ float: left;
 height: 400px;
 margin: 10px;
 width: 300px;
-//background-color: #333;
+/* //background-color: #333; */
 border-radius: 20px 20px 20px 20px;
 
 }
@@ -992,7 +999,7 @@ float: left;
 height: 400px;
 margin: 10px;
 width: 300px;
-//background-color: #333;
+/* //background-color: #333; */
 border-radius: 20px 20px 20px 20px;
 
 }
@@ -1013,7 +1020,7 @@ float: left;
 height: 400px;
 margin: 10px;
 width: 300px;
-//background-color: #333;
+/* //background-color: #333; */
 border-radius: 20px 20px 20px 20px;
 
 }
@@ -1072,7 +1079,7 @@ height: 400px;
 margin: 10px;
 margin-left:50px;
 width: 250px;
-//background-color: #333;
+/* //background-color: #333; */
 border-radius: 20px 20px 20px 20px;
 
 }
@@ -1095,7 +1102,7 @@ height: 400px;
 margin: 10px;
 margin-left:20px;
 width: 250px;
-//background-color: #333;
+/* //background-color: #333; */
 border-radius: 20px 20px 20px 20px;
 
 }
@@ -1118,7 +1125,7 @@ height: 400px;
 margin: 10px;
 margin-left:20px;
 width: 250px;
-//background-color: #333;
+/* //background-color: #333; */
 border-radius: 20px 20px 20px 20px;
 
 }
@@ -1141,7 +1148,7 @@ height: 400px;
 margin: 10px;
 margin-left:20px;
 width: 250px;
-//background-color: #333;
+/* //background-color: #333; */
 border-radius: 20px 20px 20px 20px;
 
 }
@@ -1164,7 +1171,7 @@ height: 400px;
 margin: 10px;
 margin-left:20px;
 width: 250px;
-//background-color: #333;
+/* //background-color: #333; */
 border-radius: 20px 20px 20px 20px;
 
 }
@@ -1401,7 +1408,7 @@ transform: scale(2.0);
   width:190px;
   margin:20px;
   margin-left:35px;
- //background-color: red;
+ /* //background-color: red; */
 
 }
 .dt h3
@@ -1423,7 +1430,7 @@ transform: scale(2.0);
   width:190px;
   margin:20px;
   margin-left:15px;
- //background-color: red;
+ /* //background-color: red; */
 
 }
 .dt-1 h3
@@ -1446,7 +1453,7 @@ transform: scale(2.0);
   width:190px;
   margin:20px;
   margin-left:10px;
- //background-color: red;
+ /* //background-color: red; */
 
 }
 .dt-2 h3
@@ -1468,7 +1475,7 @@ transform: scale(2.0);
   width:190px;
   margin:20px;
   margin-left:5px;
- //background-color: red;
+ /* //background-color: red; */
 
 }
 .dt-3 h3
@@ -1490,7 +1497,7 @@ transform: scale(2.0);
   width:150px;
   margin:20px;
   margin-left:15px;
- //background-color: red;
+ /* //background-color: red; */
 
 }
 .dt-4 h3
