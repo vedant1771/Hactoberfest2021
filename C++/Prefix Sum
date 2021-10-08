@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+void prefix_sum(int a[],int n)
+{
+    int ar[n];
+    ar[0]=a[0];
+    for(int i=1;i<n;i++)
+    {
+        ar[i]=ar[i-1]+a[i];
+    }
+    for(int i=0;i<n;i++)
+    {
+        cout<<ar[i]<<endl;
+    }
+}
+int main()
+{
+int n;
+cin>>n;
+int a[n];
+for(int i=0;i<n;i++)
+{
+    cin>>a[i];
+}
+prefix_sum(a,n);
+}
