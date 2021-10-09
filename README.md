@@ -1,10 +1,10 @@
-# Hactoberfest2021
+# Hactoberfest 2021
 
-## Repository for Hactoberfest2021.
+## Repository for Hactoberfest 2021.
 ![image](https://user-images.githubusercontent.com/90646049/135742786-3a6fc9dc-51ce-4feb-819c-7d37dc753755.png)
 
 
-#### Important links
+#### Important links to participate
 ##### Visit the Hacktoberfest website here[Hacktoberfest 2021](https://hacktoberfest.digitalocean.com/)
 ##### Checkout the cooool Swags for this year [Hacktoberfest Swag list](https://hacktoberfestswaglist.com/)
 
