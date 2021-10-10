@@ -16,7 +16,6 @@
       margin-top: 5pt;
       margin: auto;
     }
-
     .container_body {
       max-width: 50%;
       background-color: rgb(255, 255, 255);
@@ -26,7 +25,6 @@
       margin-top: 5pt;
       margin: auto;
     }
-
     .heading {
       font-family: "Times New Roman", Times, serif;
       font-style: italic;
@@ -35,7 +33,7 @@
     }
   </style>
         <h1></h1>
-<body>
+   <body>
         <div class="container_head">
             <h1 class="heading">Operators in PHP</h1>
         </div>
@@ -69,8 +67,6 @@
     $var_expo = $a**$b;
     echo nl2br("\n6. Exponentiation of 10 on 5 is ");
     echo $var_expo;
-
-
     echo nl2br("\n\n<h3>B. Assignment operators in PHP*</h3>");
 
     $x = 20;  
@@ -180,7 +176,6 @@
     echo $x--;
     echo", After Decerment $x";
    
-
     echo nl2br("\n\n<h3>E. Logical Operators in PHP*</h3>");
 
     $var_a=(true and true);
@@ -214,9 +209,6 @@
     echo"<br>";
 
     ?> 
-
     </div>
-
 </body>
-
 </html>
