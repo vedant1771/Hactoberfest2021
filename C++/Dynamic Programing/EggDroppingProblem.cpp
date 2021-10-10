@@ -14,22 +14,24 @@ void input()
       table[i] = new int[floor+1];
 
 }
-int find_min_probes(int e,int f)
+int find_min_probes(int n,int k)
 {   
 
-	if(e==1)
-		return f;
-
-    if(f==0||f==1)
-		return  f;
-
-    int probes=INT_MAX;
-    for(int k=1;k<=f;k++)
-    {
-		int temp=1+max(find_min_probes(e-1,k-1),find_min_probes(e,f-k));
-        probes=min(probes,temp);
-    }
-   	return probes;
+	int dp[n+1][k+1];
+        int ans;
+        for(int i = 0;i<=n;i++){
+            for(int j = 0;j<=k;j++){
+                if(i == 0 or j == 0) dp[i][j] = 0;
+                else if(i == 1 or j == 1) dp[i][j] = j;
+                else {
+                    dp[i][j] = INT_MAX;
+                    for(int x = 1;x<=j;x++){
+                        ans = 1+max(dp[i][j-x],dp[i-1][x-1]);
+                        dp[i][j] = min(dp[i][j],ans);}
+                }
+            }
+        }
+        return dp[n][k];
 }
 
 void display()
