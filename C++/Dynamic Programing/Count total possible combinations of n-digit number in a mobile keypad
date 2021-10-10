@@ -1,0 +1,130 @@
+Given a positive number and a mobile keypad having digits from 0 to 9 associated with each key, count the total possible combinations of digits having length n. We can start with any digit and 
+press only four adjacent keys of any digit . The keypad also cointains * and # keys, which we are not allowed to press.
+
+example:
+Input:  n = 2
+ 
+Output: 36
+ 
+Explanation: Total possible combinations are 36 [00, 08, 11, 12, 14, 21, 22, 23, 25, 32, 33, 36, 41, 44, 45, 47, … ,96, 98, 99]
+
+code:
+#include <iostream>
+#include <vector>
+#include <map>
+using namespace std;
+ 
+// The function returns false if `(i, j)` is not a valid position
+int isValid(int i, int j)
+{
+    // for handling `*` or `#` (present in 4th row and 1st & 3rd column)
+    if (i == 3 && (j == 0 || j == 2)) {
+        return 0;
+    }
+ 
+    return (i >= 0 && i <= 3 && j >= 0 && j <= 2);
+}
+ 
+// Function to fill a multimap that stores the mapping of cells
+// reachable from the current cell
+multimap<int, int> fillMap(vector<vector<char>> const &keypad)
+{
+    // use a multimap to store the mapping of cells reachable
+    // from the current cell
+    multimap<int, int> mapping;
+ 
+    // Below arrays detail all four possible movements from the current cell
+    int row[] = { 0, -1, 0, 1 };
+    int col[] = { -1, 0, 1, 0 };
+ 
+    // do for each row
+    for (int i = 0; i < 4; i++)
+    {
+        // do for each column of row `i`
+        for (int j = 0; j < 3; j++)
+        {
+            // move in all four possible directions of current
+            // digit `keypad[i][j]`
+            for (int k = 0; k < 4; k++)
+            {
+                int r = i + row[k];
+                int c = j + col[k];
+ 
+                // insert the adjacent cell into the multimap if valid
+                if (isValid(i, j) && isValid(r, c)) {
+                    mapping.insert(make_pair(keypad[i][j] - '0', keypad[r][c] - '0'));
+                }
+            }
+        }
+    }
+ 
+    return mapping;
+}
+ 
+// Function to count all numbers starting from digit `i` and
+// having length `n`
+int getCount(multimap<int, int> mapping, int i, int n, auto &lookup)
+{
+    if (n == 1) {    // reached end of the digit
+        return 1;
+    }
+ 
+    // if the subproblem is seen for the first time, solve it and
+    // store its result in an array
+    if (lookup[i][n] == 0)
+    {
+        // recur for digit `i`
+        lookup[i][n] = getCount(mapping, i, n - 1, lookup);
+ 
+        // recur for all digits reachable from `i`
+        for (auto it = mapping.find(i);
+                (it != mapping.end() && it->first == i); it++) {
+            lookup[i][n] += getCount(mapping, it->second, n - 1, lookup);
+        }
+    }
+ 
+    // return the subproblem solution
+    return lookup[i][n];
+}
+ 
+int findCount(int n, vector<vector<char>> const &keypad)
+{
+    // get the mapping of cells reachable from the current cell
+    multimap<int, int> mapping = fillMap(keypad);
+ 
+    // create a lookup table to store solutions to subproblems
+    // `lookup[i][j]` stores count of all numbers starting from digit `i`
+    // having length `n`
+    vector<vector<int>> lookup(10, vector<int>(n + 1));
+ 
+    int count = 0;
+ 
+    // get the count of each digit
+    for (int i = 0; i <= 9; i++) {
+        count += getCount(mapping, i, n, lookup);
+    }
+ 
+    return count;
+}
+ 
+int main()
+{
+    // n-digit
+    int n = 2;
+ 
+    // mobile mapping
+    vector<vector<char>> keypad =
+    {
+        { '1', '2', '3' },
+        { '4', '5', '6' },
+        { '7', '8', '9' },
+        { '*', '0', '#' }
+    };
+ 
+    cout << "Total possible combinations are " << findCount(n, keypad);
+ 
+    return 0;
+}
+
+
+Time Complexity: -> O(n^2) and requires O(n) extra space, where n is the given length of digits.
