@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Student Registration</title>
+</head>
+<body>
+    <table border="2" cellspacing="0" align="center" cellpadding="2" width="500px">
+        <form action="">
+            <tr>
+                <td align="center"><label for="">Username </label></td>
+            
+                <td><input type="text" value="Ravi kant Chauhan" minlength="5" maxlength="9"></td>
+        
+            </tr> <br><br>
+            <tr>
+            <td align="center"><label for="">Password </label></td>
+            <td><input type="password" minlength="5" maxlength="9" value="*********"></td>
+            </tr><br><br>
+            <tr>
+                <td align="center"><label for="">Email </label></td>
+                <td><input type="email" value="ravikantchauhan65@gmail.com"></td>
+            </tr><br><br>
+            <tr>
+                <td align="center"> <label for="">State </label></td>
+                    <td>
+                        <select name="" id=""> <br><br>
+                            <option value=""  selected>select</option>
+                            <option value="">Uttar Pradesh</option>
+                            <option value="">Bihar</option>
+                            <option value="">Delhi</option>
+                        </select>
+                </td>
+            </tr>
+                     <br><br>  
+
+            <tr>
+                <td align="center"><label for="gender">Gender </label></td>
+                <td><input type="radio" name="radio" id="gender" checked> Male
+                    <input type="radio" name="radio" id="gender"> Female
+                    <input type="radio" name="radio" id="gender"> Other</td>
+            </tr>
+             <br><br>
+           
+            <tr>
+                <td align="center"><label for=""> Hobbies </label> </td>
+                <td><input type="checkbox" name="" id="" checked> Bandminton Player <br>
+                    <input type="checkbox" name="" id="">Cricket <br>
+                    <input type="checkbox" name="" id="">Singing <br>
+                    <input type="checkbox" name="" id="">Dancing 
+                </td>
+            </tr>
+               <br><br>
+
+            <tr>
+               <td align="center"><label for="">Mobile No. </label></td>
+
+               <td><input type="tel" name="" id="" minlength="10" maxlength="10" value="8303941127"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="reset">Reset </button>
+                    <button type="submit">Submit</button>
+                </td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>
