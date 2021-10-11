@@ -16,7 +16,7 @@ def timing():
 
     #display current hour,minute,seconds
 
-    current_time = time.strftime("%H : %M : %S")
+    current_time = time.strftime("%H :: %M :: %S")
 
     #configure the clock
 
