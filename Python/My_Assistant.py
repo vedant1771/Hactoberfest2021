@@ -27,9 +27,8 @@ def wishMe():
         speak("Good Afternoon!")
 
     else :
-        speak("चुतुपर्णा चुत चाटकर")
-        speak("")
-    speak("I am your assistant बहन के लाओदे, Could you please tell how, may I help you ?? ")
+        speak("Hi there ")
+    speak("I am your assistant, Could you please tell how, may I help you ?? ")
 
 def takeCommand():  #take input from mic to text(string))
 
