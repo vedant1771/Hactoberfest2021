@@ -1,4 +1,3 @@
-Code by ShreyaDayma-cse
 import java.util.*;
 public class fibonacci {
     void cal(int n){
@@ -13,7 +12,7 @@ public class fibonacci {
     }
     public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
-        System.out.println("Enter the number of elements you want in the series:");
+        System.out.println("Enter number of elements you want in series:");
         int n=sc.nextInt();
         fibonacci ob=new fibonacci();
         ob.cal(n);
