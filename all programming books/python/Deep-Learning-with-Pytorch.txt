@@ -1,0 +1,1 @@
+https://pytorch.org/assets/deep-learning/Deep-Learning-with-PyTorch.pdf
