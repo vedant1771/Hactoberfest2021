@@ -1,0 +1,113 @@
+// In this article we will see all about BIT MANIPULATION and some cool bit manipulation tips / hacks and tricks
+
+-> BY USING CEIL() AND FLOOR() :-
+	Time complexity :- O(log2(n))
+	Space complexity :- O(1)
+
+-> BY USING % and / OPERATOR :-
+	Time complexity :- O(log2(n))
+	Space complexity :- O(1)
+
+-> BY USING BIT MANIPULATION :-
+	Time complexity :- O(1)
+	Space complexity :- O(1)
+
+1) num = num << i;    //num will multiplication by pow(2,i)
+
+2) num = num >> i;    //num will division by pow(2,i)
+
+3) TO CHECK WHETHER NUMBER IS ODD OR EVEN :-
+	if((num & 1) == 0)
+      cout << "Even number";  
+    else
+      cout << "Odd number"; 
+
+4) TO SWAP TWO NUMBERS :-
+      x = x ^ y; 
+      y = x ^ y; 
+      x = x ^ y;
+
+5) TO CHECK ith BIT IS SET OR NOT OF A NUMBER :-
+     x = num & (1 << (i-1));
+     if(x) cout<<"set"<<endl;
+     else cout<<"not set"<<endl;
+
+6) TO FLIP ith BIT OF A NUMBER :-
+     x = num ^ (1 << (i-1)); 
+
+7) TO TURN ON ith BIT OF A NUMBER :-
+     x = num | (1 << (i-1));
+
+8) TO TURN OFF ith BIT OF A NUMBER :-
+     x = num & ~(1 << (i-1));
+
+9) TO CHECK IF A NUMBER IS POWER OF 2 OR NOT :-
+     x = num & (num - 1);
+     if(!x) cout<<"power of 2"<<endl;
+     else cout<<"not a power of 2"<<endl;
+
+10) TO CONVERT UPPERCASE TO LOWERCASE LETTER :-
+     ch = ch | ' ';
+
+11) TO CONVERT LOWERCASE LETTER TO UPPERCASE LETTER :-
+     ch = ch & '_'; 
+ NOTE :- //for both lower to upper and upper to lower.
+     		ch = ch ^ (1 << 5)
+
+12) TO FIND MIN MAX OF TWO NUMBERS :-
+     minimum = y ^ ((x ^ y) & -(x < y)); // min(x, y) 
+     maximum = x ^ ((x ^ y) & -(x < y)); // max(x, y) 
+
+13) TO COUNT ALL SET BITS OF AN NUMBER :-
+       int count = 0;
+       while (num) {
+           num &= (num - 1);
+           count++;
+       }
+       return count;
+---> OR <---
+      cout<< __builtin_popcount(num) ; 
+
+14)  TO COUNT LEADING ZEROS :-
+	   int count_zeros(int num)
+	   {
+	   unsigned y;
+	   int n = 32;
+	   y = num >> 16;
+	   if (y != 0) {
+	       n = n - 16;
+	       num = y;
+	   }
+	   y = num >> 8;
+	   if (y != 0) {
+	       n = n - 8;
+	       num = y;
+	   }
+	   y = num >> 4;
+	   if (y != 0) {
+	       n = n - 4;
+	       num = y;
+	   }
+	   y = num >> 2;
+	   if (y != 0) {
+	       n = n - 2;
+	       num = y;
+	   }
+	   y = num>> 1;
+	   if (y != 0)
+	       return n - 2;
+	   return n - num;
+	  }
+---> OR <---
+	   __builtin_clz (x)
+
+15)  TO COUNT TRAILING ZEROS :-
+	   int count = 0;
+	   while ((x & 1) == 0)
+	  	{
+	       x = x >> 1;
+	       count++;
+	  	}
+	  return count;
+---> OR <---
+	   __builtin_ctz (x)
