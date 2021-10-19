@@ -1,0 +1,34 @@
+#include<iostream>
+#include<math.h>
+#include<sstream>
+#include<string>
+using namespace std;
+int main()
+{
+	int n,temp,sum=0,size,digit;
+	string str;
+	ostringstream str1;
+	cout<<"enter the number:";
+	cin>>n;
+	
+	temp=n;
+	
+	str1<<n;
+	string s=str1.str();
+	size=s.length();
+	
+	while(temp!=0)
+	{
+		digit=temp%10;
+		sum=sum+pow(digit,size);
+		temp=temp/10;
+	}
+	if(n==sum)
+	{
+		cout<<"amstrong number";
+	}
+	else
+	{
+		cout<<"not a amstrong number";
+	}
+}
