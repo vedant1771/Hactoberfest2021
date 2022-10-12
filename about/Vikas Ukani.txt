@@ -1,8 +1,0 @@
-Hello, My self Vikas Ukani,,
-
-I'm a software engineer from India.  Working as Fullstack developer
-
-Find more about ME:  
-https://www.linkedin.com/in/vikas-ukani-a02499167/
-https://www.kaggle.com/vikasukani
-https://github.com/vikas-ukani
