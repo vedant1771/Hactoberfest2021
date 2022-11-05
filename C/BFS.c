@@ -1,7 +1,7 @@
 //C program to create a spanning tree from a given graph using BFS algorithm.
 #include <stdio.h> //including the standard input-output header file
 
-int q[20], front = -1, rear = -1, a[20][20], vis[20];
+int q[200], front = -1, rear = -1, a[20][20], vis[20];
 //declaring global variables
 
 //to add the element to the maintained Queue
